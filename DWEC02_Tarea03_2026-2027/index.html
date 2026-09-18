@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestor de incidencias - DWEC</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav>
+    <div class="nav-center">
+      <h4>GESTOR DE INCIDENCIAS TÉCNICAS - DWEC</h4>
+      <span class="contador">Incidencias registradas: <strong id="numeroIncidencias">0</strong></span>
+    </div>
+  </nav>
+
+  <main class="page">
+    <section class="panel">
+      <h2>Nueva incidencia</h2>
+      <p>Introduce los datos y utiliza los botones para gestionar el registro.</p>
+
+      <form>
+        <div class="grid-form">
+          <div class="field">
+            <label for="codigo">Código</label>
+            <input type="text" id="codigo" placeholder="INC-104">
+          </div>
+          <div class="field">
+            <label for="equipo">Equipo afectado</label>
+            <input type="text" id="equipo" placeholder="AULA2-PC14">
+          </div>
+          <div class="field">
+            <label for="prioridad">Prioridad</label>
+            <select id="prioridad">
+              <option value="Baja">Baja</option>
+              <option value="Media" selected>Media</option>
+              <option value="Alta">Alta</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="tecnicos">Técnicos, separados por comas</label>
+            <input type="text" id="tecnicos" placeholder="Ana López, Iker Ruiz">
+          </div>
+          <div class="field field-full">
+            <label for="etiquetas">Etiquetas, separadas por comas</label>
+            <input type="text" id="etiquetas" placeholder="red, windows, impresora">
+          </div>
+          <div class="field field-full">
+            <label for="descripcion">Descripción</label>
+            <textarea id="descripcion" placeholder="Describe brevemente la incidencia..."></textarea>
+          </div>
+        </div>
+
+        <div class="actions">
+          <input type="button" class="btn" value="Agregar incidencia" onclick="agregarIncidencia()">
+          <input type="button" class="btn" value="Borrar incidencia" onclick="borrarIncidencia()">
+          <input type="button" class="btn" value="Visualizar incidencias" onclick="mostrarIncidencias()">
+          <input type="button" class="btn" value="Filtrar incidencias" onclick="filtrarIncidencias()">
+        </div>
+      </form>
+    </section>
+
+    <section class="panel">
+      <h2>Resultados</h2>
+      <div id="datos" class="resultados">
+        <p class="mensaje">Todavía no se han mostrado incidencias.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Añade aquí la etiqueta <script> necesaria para enlazar index.js. -->
+</body>
+</html>

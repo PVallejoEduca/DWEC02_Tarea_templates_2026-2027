@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de proyectos web - DWEC</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav>
+        <div class="nav-center">
+            <h4>GESTOR DE PROYECTOS WEB - DWEC</h4>
+        </div>
+    </nav>
+
+    <main class="page">
+        <section class="panel">
+            <h2>Datos del proyecto</h2>
+            <p>Crea la ficha JavaScript de un proyecto web a partir de los datos del formulario.</p>
+
+            <form>
+                <div class="grid-form">
+                    <div class="field">
+                        <label for="nombreProyecto">Nombre del proyecto</label>
+                        <input type="text" id="nombreProyecto" placeholder="AulaVirtual">
+                    </div>
+
+                    <div class="field">
+                        <label for="responsable">Responsable</label>
+                        <input type="text" id="responsable" placeholder="Ana García">
+                    </div>
+
+                    <div class="field">
+                        <label for="fechaEntrega">Fecha de entrega</label>
+                        <input type="date" id="fechaEntrega">
+                    </div>
+
+                    <div class="field">
+                        <label for="horasEstimadas">Horas estimadas</label>
+                        <input type="number" id="horasEstimadas" placeholder="80">
+                    </div>
+
+                    <div class="field">
+                        <label for="presupuesto">Presupuesto (€)</label>
+                        <input type="number" id="presupuesto" placeholder="3200">
+                    </div>
+
+                    <div class="field">
+                        <label for="urlRepositorio">URL del repositorio</label>
+                        <input type="text" id="urlRepositorio" placeholder="https://github.com/...">
+                    </div>
+
+                    <div class="field field-full">
+                        <label for="tecnologias">Tecnologías, separadas por comas</label>
+                        <input type="text" id="tecnologias"
+                            placeholder="JavaScript, React, Node, MySQL">
+                    </div>
+                </div>
+
+                <div class="actions">
+                    <input type="button" class="btn" value="Crear proyecto" onclick="crearProyecto()">
+                </div>
+
+                <div id="botonesProyecto" class="actions oculto">
+                    <input type="button" class="btn btn-secondary" value="Mostrar resumen"
+                        onclick="mostrarResumen()">
+                    <input type="button" class="btn btn-secondary" value="Abrir repositorio"
+                        onclick="abrirRepositorio()">
+                </div>
+            </form>
+        </section>
+
+        <section class="panel">
+            <h2>Compatibilidad tecnológica</h2>
+            <p>Comprueba qué tecnologías del proyecto coinciden con las utilizadas habitualmente por la empresa.</p>
+
+            <div class="actions">
+                <input type="button" class="btn" value="Comprobar tecnologías"
+                    onclick="comprobarTecnologias()">
+            </div>
+
+            <div id="resultadoCompatibilidad" class="resultado"></div>
+
+            <div id="botonExperimentales" class="actions oculto">
+                <input type="button" class="btn btn-secondary" value="Tecnologías experimentales"
+                    onclick="comprobarExperimentales()">
+            </div>
+
+            <div id="resultadoExperimentales" class="resultado"></div>
+        </section>
+    </main>
+
+    <!--
+        Añade aquí la etiqueta <script> necesaria para enlazar index.js.
+        No modifiques el resto de la estructura HTML.
+    -->
+</body>
+
+</html>
